@@ -1,0 +1,1 @@
+cat /etc/passwd | cut -f 1 -d ":" | awk '(NR%2==0)' | rev | sort -r | tr '\n' ',' | cut -f $FT_LINE1-$FT_LINE2 -d ',' | sed 's/,/, /g'| tr '\n' '.'
